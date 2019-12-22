@@ -6,11 +6,11 @@ var https = require("https");
 const app = express();
 
 // Serve only the static files form the dist directory
-app.use(express.static('./dist/solar-noon'));
+app.use(express.static('./dist/solarNoon'));
 
 app.get('/*', function(req,res) {
 
-res.sendFile(path.join(__dirname,'/dist/solar-noon/index.html'));
+res.sendFile(path.join(__dirname,'/dist/solarNoon/index.html'));
 });
 
 /*setInterval(function() {
