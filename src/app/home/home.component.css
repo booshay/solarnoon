@@ -40,9 +40,20 @@
     text-align: center;
 }
 
+  .table, table th, table td{
+    margin: 4rem auto;
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+@media (max-width: 500px) {
 .table, table th, table td{
   margin: 4rem auto;
   color: white;
   text-align: center;
-  font-size: 3rem;
+  font-size: 1.2rem;
+ }
 }
+

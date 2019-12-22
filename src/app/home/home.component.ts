@@ -43,10 +43,10 @@ export class HomeComponent implements OnInit {
   constructor(private dataService: DataService, private fb: FormBuilder) { }
 
   myForm: FormGroup;
- // info:Options;
+  info:Options;
 
 
- info =  { "location": { "latitude": 42.159385, "longitude": -72.720768 }, "date": "2019-12-21", "sunrise": "07:17", "sunset": "16:23", "solar_noon": "11:48", "day_length": "9:6", "sun_altitude": -25.605007904029122, "sun_distance": 147182655.80669075, "sun_azimuth": 260.7314874654219, "moonrise": "03:10", "moonset": "14:02", "moon_altitude": -51.94642078940774, "moon_distance": 368397.9808201296, "moon_azimuth": 323.7940482845218, "moon_parallactic_angle": 13.912047686326504 }
+ //info =  { "location": { "latitude": 42.159385, "longitude": -72.720768 }, "date": "2019-12-21", "sunrise": "07:17", "sunset": "16:23", "solar_noon": "11:48", "day_length": "9:6", "sun_altitude": -25.605007904029122, "sun_distance": 147182655.80669075, "sun_azimuth": 260.7314874654219, "moonrise": "03:10", "moonset": "14:02", "moon_altitude": -51.94642078940774, "moon_distance": 368397.9808201296, "moon_azimuth": 323.7940482845218, "moon_parallactic_angle": 13.912047686326504 }
   
   ngOnInit() {
     this.myForm = this.fb.group({
@@ -55,8 +55,8 @@ export class HomeComponent implements OnInit {
   }
 
   getData() {
-    //this.dataService.getData(this.myForm.value.site.coords)
-       //.subscribe(data => this.info = data);
+    this.dataService.getData(this.myForm.value.site.coords)
+       .subscribe(data => this.info = data);
   }
 
 }

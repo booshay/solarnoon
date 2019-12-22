@@ -22,15 +22,15 @@
 
  
 <!-- display area-->
-<div *ngIf="info">
+<div class = "display" *ngIf="info">
 <table class="container table">
   <tr>
     <th>Solar Noon</th>
-    <th>Azimuth</th>
+    <th>Current Azimuth</th>
   </tr>
   <tr>
     <td>{{info.solar_noon}}</td>
-    <td>{{info.sun_azimuth}}</td>
+    <td>{{info.sun_azimuth | number:'3.1-2'}}</td>
   </tr>
 </table>
 </div>
