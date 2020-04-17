@@ -48,7 +48,13 @@
     font-size: 2rem;
 }
 @media (max-width: 800px) {
-  
+  .table, table th, table td{
+    margin: 4rem auto;
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bolder;
+   }
 .form {
 max-width: 600px;
 justify-content: center;
@@ -60,7 +66,8 @@ justify-content: center;
   margin: 4rem auto;
   color: white;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
  }
 }
 
